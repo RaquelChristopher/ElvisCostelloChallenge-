@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var imageName = "peacesign"
-    @State private var message = "Peace"
+    @State private var imageName = ""
+    @State private var message = ""
     
     
     // will change string name later to just have Parenthesis and no text so we can change for each button

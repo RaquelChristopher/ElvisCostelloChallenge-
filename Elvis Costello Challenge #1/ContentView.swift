@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var message = ""
-    @State private var imageName = ""
+    @State private var imageName = "peacesign"
+    @State private var message = "Peace"
+    
+    
+    // will change string name later to just have Parenthesis and no text so we can change for each button
+    
     var body: some View {
        
-        
-        
         VStack {
-            
-            Text("What's so Funny 'Bout")
+            Text("What's So Funny 'Bout")
                 .font(.largeTitle)
                 .fontWeight(.black)
                 .foregroundStyle(.purple)
+            
             
             Spacer()
             
@@ -27,7 +29,6 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 300, height: 300)
-                
             
             Text(message)
                 .font(.largeTitle)
@@ -36,32 +37,35 @@ struct ContentView: View {
             
             Spacer()
             
-            HStack {
+            HStack{
+                
                 Button("Peace") {
                     message = "Peace"
                     imageName = "peacesign"
                 }
-                
                 Button("Love") {
                     message = "Love"
                     imageName = "heart"
                 }
-                
                 Button("Understanding") {
-                    message = "Understanding"
+                   message = "Understanding"
                     imageName = "lightbulb"
                 }
                 
-                
-                
             }
-            
             .tint(.purple)
             .buttonStyle(.borderedProminent)
+            
             
         }
         
         .padding()
+        
+      
+       
+        
+            
+        
     }
 }
 
